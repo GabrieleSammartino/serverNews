@@ -23,9 +23,11 @@ router.post('/', function (req, res, next) {
 });
 router.put('/:id',function(req,res,next){
     var _setObj = JSON.parse(JSON.stringify({
-        name: req.body.name ? req.body.name : undefined,
-        surname: req.body.surname ? req.body.surname : undefined,
-        age: req.body.age ? req.body.age : undefined
+        title: req.body.title ? req.body.title : undefined,
+        img: req.body.img ? req.body.img : undefined,
+        category: req.body.category ? req.body.category : undefined,
+        description: req.body.description ? req.body.description : undefined
+
     }));
     if (req.params.id == 'all'){
         var conditions = {}, update =( {$set: _setObj}), options = { multi: true };
