@@ -11,6 +11,8 @@ var index = require('./routes/index');
 var news = require('./routes/news');
 
 var app = express();
+app.use(cors());
+
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://gabriele.sammartino:asd123@ds113958.mlab.com:13958/gabriele');
 
